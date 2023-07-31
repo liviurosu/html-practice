@@ -4,12 +4,24 @@
 <head>
     <title>Superheroes</title>
     <link rel="stylesheet" type="text/css" href="styles/heroes-styles.css" />
+    <script>
+        function changeStyle(){
+            console.log("testing exec of changeStyle");
+            document.getElementById('special-header').className='changed-style';
+        }
+        const changeText = function(){
+            console.log("testing exec of changeText");
+            document.getElementById('SuperPerson').textContent='A Super Person';
+        }
+
+        const changeText2=()=>document.getElementById('theFlash').textContent='Jay - the Flash - Garrick';
+    </script>
 </head>
 
 <body>
     <table>
         <tr>
-            <th id="special-header" onclic="changeStyle()">Alias</th>
+            <th id="special-header" onclick="changeStyle()">Alias</th>
             <th>Name</th>
             <th>Superpower</th>
         </tr>
@@ -19,12 +31,12 @@
             <td>Martial Arts</td>
         </tr>
         <tr>
-            <td>Superman</td>
+            <td id='SuperPerson' onclick="changeText()">Superman</td>
             <td>Clark Kend</td>
             <td>Flight</td>
         </tr>
         <tr>
-            <td>The Flash</td>
+            <td id ='theFlash' onclick="changeText2()">The Flash</td>
             <td>Jay Garrick</td>
             <td>Super-Speed</td>
         </tr>
